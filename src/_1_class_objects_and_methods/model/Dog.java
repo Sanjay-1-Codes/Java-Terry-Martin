@@ -14,4 +14,12 @@ public class Dog extends Pet {
     public void bark() {
         System.out.println("Woof Woof!");
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
