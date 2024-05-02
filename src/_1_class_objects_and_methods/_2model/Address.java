@@ -1,4 +1,4 @@
-package _1_class_objects_and_methods.model;
+package _1_class_objects_and_methods._2model;
 
 public class Address {
     private String addressLine1;

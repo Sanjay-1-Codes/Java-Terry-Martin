@@ -1,4 +1,4 @@
-package _1_class_objects_and_methods.model;
+package _1_class_objects_and_methods._2model;
 
 import java.time.LocalDate;
 
@@ -22,4 +22,6 @@ public class Dog extends Pet {
     public void setType(String type) {
         this.type = type;
     }
+
+
 }
