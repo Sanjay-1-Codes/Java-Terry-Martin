@@ -1,5 +1,7 @@
 package _2_working_with_text._1executable;
 
+import static java.lang.StringTemplate.STR;
+
 public class StringExecutable {
 
     public static void main(String[] args) {
@@ -15,6 +17,36 @@ public class StringExecutable {
         understandStringSubString();
         understandStringIndexOf();
         understandStringSplit();
+        understandStringStartsEndsWith();
+        understandStringContentEquals();
+        understandStringTemplates();
+    }
+
+    private static void understandStringTemplates() {
+        System.out.println("-- UNDERSTAND STRING TEMPLATE --");
+        String firstName = "John";
+        String lastName = "Smith";
+        // StringTemplates - Interpolation of strings
+        System.out.println(STR."His name is \{lastName}, \{firstName}");
+    }
+
+    private static void understandStringContentEquals() {
+        System.out.println("-- UNDERSTAND STRING CONTENT EQUALS --");
+
+        String comparingText = "Apple";
+        String comparedText = "Apple";
+        // equals() and contentEquals() both does the same job, but equals() strictly accepts String type alone but
+        // contentEquals() accepts CharSequence(Parent class of String, StringBuilder, StringBuffer etc)
+        System.out.println(comparingText.contentEquals(comparedText));
+        System.out.println(comparingText.equals(comparedText));
+    }
+
+    private static void understandStringStartsEndsWith() {
+        System.out.println("-- UNDERSTAND STRING STARTS ENDS WITH --");
+        String fileName = "colours.txt";
+        System.out.println(fileName.endsWith(".txt"));
+        fileName = "segment001.txt";
+        System.out.println(fileName.startsWith("segment"));
     }
 
     private static void understandStringSplit() {
@@ -25,12 +57,12 @@ public class StringExecutable {
         // split(regex)
         // split(regex, noOfOutputElementsInTheArray)
         String[] unlimitedFruitsArray = fruits.split(",");
-        for(String fruit : unlimitedFruitsArray) {
+        for (String fruit : unlimitedFruitsArray) {
             System.out.println(fruit);
         }
         System.out.println("---");
         String[] limitedFruitsArray = fruits.split(",", 2);
-        for(String fruit : limitedFruitsArray) {
+        for (String fruit : limitedFruitsArray) {
             System.out.println(fruit);
         }
     }
